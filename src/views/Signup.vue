@@ -8,7 +8,7 @@
                 <v-spacer></v-spacer>
               </v-toolbar>
               <v-card-text>
-
+                <!--vuetify alert-->
                 <v-alert
                 :value="error"
                 type="warning">
@@ -23,7 +23,7 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="primary" @click.prevent="signup" :disabled="processing || !valid">Зарегистрироваться</v-btn>
+                <v-btn color="primary" round @click.prevent="signup" :disabled="processing || !valid">Зарегистрироваться</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
@@ -33,11 +33,33 @@
 
 <script>
     export default {
-        data() {
+        data () {
             return {
                 email: null,
                 password: null
             }
+        },
+        computed: {
+          error () {
+            return this.$store.getters.getError
+          },
+          processing () {
+            return this.$store.getters.getProcessing
+          },
+          isUserAuthentificated () {
+            return this.$store.getters.isUserAuthentificated
+          }
+        },
+        watch: {
+          isUserAuthentificated(val) {
+            if (val === true)
+              this.$router.push('/')
+          }
+        },
+        methods: {
+          signup () {
+            this.$store.dispatch('SIGNUP', {email: this.email, password: this.password})
+          }
         }
     }
 </script>
