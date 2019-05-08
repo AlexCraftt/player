@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Playlist from '@/components/Playlist'
-import Playlists from '@/components/Playlists'
-import MyMusic from '@/components/MyMusic'
-import Signin from '@/components/Signin'
-import Signup from '@/components/Signup'
-import Profile from '@/components/Profile'
-import Tracks from '@/components/Tracks'
+import Playlists from '@/views/Playlists'
+import MyMusic from '@/views/MyMusic'
+import Signin from '@/views/Signin'
+import Signup from '@/views/Signup'
+import Profile from '@/views/Profile'
+import Tracks from '@/views/Tracks'
 
 Vue.use(Router)
 
