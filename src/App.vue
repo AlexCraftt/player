@@ -13,7 +13,8 @@ import AppHeader from '@/components/AppHeader'
 import AppFooter from '@/components/AppFooter'
   export default {
     components: {
-      AppHeader
+      AppHeader,
+      AppFooter
     }
   }
 </script>

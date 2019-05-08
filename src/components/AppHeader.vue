@@ -37,39 +37,40 @@
             }
         },
         computed: {
+            isUserAuthentificated(){
+                return this.$store.getters.isUserAuthentificated
+            },
             menuItems () {
-                return [
-                    {
-                        icon: 'library_music',
-                        title: 'Треки',
-                        route: '/tracks'
-                    },
-                    {
-                        icon: 'playlist_play',
-                        title: 'Плейлисты',
-                        route: '/playlists'
-                    },
-                    {
-                        icon: 'favorite_border',
-                        title: 'Моя музыка',
-                        route: '/mymusic'
-                    },
-                    {
-                        icon: 'exit_to_app',
-                        title: 'Выйти',
-                        route: '/logout'
-                    },
-                    {
-                        icon: 'input',
-                        title: 'Войти',
-                        route: '/signin'
-                    },
-                    {
-                        icon: 'lock_open',
-                        title: 'Зарегистрироваться',
-                        route: '/signup'
-                    }
-                ]
+                return this.isUserAuthentificated
+                    ? [
+                        {
+                            icon: 'library_music',
+                            title: 'Библиотека',
+                            route: '/music_store'
+                        },
+                        {
+                            icon: 'favorite_border',
+                            title: 'Моя музыка',
+                            route: '/mymusic'
+                        },
+                        {
+                            icon: 'exit_to_app',
+                            title: 'Выйти',
+                            route: '/logout'
+                        },
+                    ] :
+                    [                                             
+                        {
+                            icon: 'input',
+                            title: 'Войти',
+                            route: '/signin'
+                        },
+                        {
+                            icon: 'lock_open',
+                            title: 'Зарегистрироваться',
+                            route: '/signup'
+                        }
+                    ]
             }
         }
     }
