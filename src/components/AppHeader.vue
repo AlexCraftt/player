@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <div>
         <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up">
             <v-list class="mt-5">
                 <v-list-tile v-for="(item, i) in menuItems" :key="`navdrawer${i}`" :to="item.route">
@@ -15,7 +15,9 @@
 
         <v-toolbar app dark class="primary">
             <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
-            <v-toolbar-title v-text="'Player'"></v-toolbar-title>
+            <router-link to="/" tag="span" style="cursor: pointer">
+                <v-toolbar-title v-text="'Player'"></v-toolbar-title>
+            </router-link>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn flat v-for="(item, i) in menuItems" :key="`menuitem${i}`" :to="item.route">
@@ -24,7 +26,7 @@
                 </v-btn>
             </v-toolbar-items>
         </v-toolbar>
-    </v-app>
+    </div>
 </template>
 
 <script>
