@@ -36,7 +36,16 @@
         data () {
             return {
                 email: null,
-                password: null
+                password: null,
+                valid: false,
+                emailRules: [
+                (v) => !!v || 'Пожалуйста, введите e-mail',
+                (v) => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'Сожалеем, но Email введен некорректно!'
+                ],
+                passwordRules: [
+                    (v) => !!v || 'Пожалуйста, введите пароль',
+                    (v) => (v && v.length >= 6) || 'Сожалеем, но с паролем меньше 6 символов нельзя зарегистрироваться'
+                ]
             }
         },
         computed: {

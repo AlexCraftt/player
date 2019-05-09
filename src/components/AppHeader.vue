@@ -16,13 +16,17 @@
         <v-toolbar app dark class="primary">
             <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
             <router-link to="/" tag="span" style="cursor: pointer">
-                <v-toolbar-title v-text="'Player'"></v-toolbar-title>
+                <v-toolbar-title><v-icon large>audiotrack</v-icon></v-toolbar-title>
             </router-link>
             <v-spacer></v-spacer>
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn flat v-for="(item, i) in menuItems" :key="`menuitem${i}`" :to="item.route">
                     <v-icon v-html="item.icon"></v-icon>
                     {{ item.title }}
+                </v-btn>
+                <v-btn flat @click.prevent="signout" v-if="isUserAuthentificated">
+                    <v-icon left>exit_to_app</v-icon>
+                    Выход
                 </v-btn>
             </v-toolbar-items>
         </v-toolbar>
@@ -52,12 +56,7 @@
                             icon: 'favorite_border',
                             title: 'Моя музыка',
                             route: '/mymusic'
-                        },
-                        {
-                            icon: 'exit_to_app',
-                            title: 'Выйти',
-                            route: '/logout'
-                        },
+                        }
                     ] :
                     [                                             
                         {
@@ -71,6 +70,11 @@
                             route: '/signup'
                         }
                     ]
+            }
+        },
+        methods: {
+            signout () {
+                this.$store.dispatch('SIGNOUT')
             }
         }
     }
