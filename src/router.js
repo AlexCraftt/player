@@ -6,6 +6,7 @@ import Signin from '@/views/Signin'
 import Signup from '@/views/Signup'
 import Profile from '@/views/Profile'
 import MusicStore from '@/views/MusicStore'
+import AuthGuard from './auth-guard.js'
 
 Vue.use(Router)
 
@@ -24,7 +25,8 @@ export default new Router({
     {
       path: '/mymusic',
       name: 'mymusic',
-      component: MyMusic
+      component: MyMusic,
+      beforeEnter: AuthGuard
     },
     {
       path: '/signin',
@@ -39,7 +41,8 @@ export default new Router({
     {
       path: '/profile',
       name: 'profile',
-      component: Profile
+      component: Profile,
+      beforeEnter: AuthGuard
     }
   ],
   mode: 'history'

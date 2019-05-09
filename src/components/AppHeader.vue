@@ -10,6 +10,14 @@
                         <v-list-tile-title v-text="item.title"></v-list-tile-title>
                     </v-list-tile-content>                    
                 </v-list-tile>
+                <v-list-tile @click.prevent="signout" v-if="isUserAuthentificated">
+                    <v-list-tile-action>
+                        <v-icon left>exit_to_app</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title>Выход</v-list-tile-title>
+                    </v-list-tile-content>                    
+                </v-list-tile>
             </v-list>
         </v-navigation-drawer>
 
@@ -60,6 +68,11 @@
                     ] :
                     [                                             
                         {
+                            icon: 'library_music',
+                            title: 'Библиотека',
+                            route: '/music_store'
+                        },
+                        {
                             icon: 'input',
                             title: 'Войти',
                             route: '/signin'
@@ -74,7 +87,12 @@
         },
         methods: {
             signout () {
-                this.$store.dispatch('SIGNOUT')
+
+                this.$confirm('Вы точно хотите выйти?')
+                .then(res => {
+                    if(res)
+                    this.$store.dispatch('SIGNOUT')
+                })                
             }
         }
     }

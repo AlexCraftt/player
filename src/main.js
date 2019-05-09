@@ -3,12 +3,20 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Vuetify from 'vuetify'
+import VuetifyConfirm from 'vuetify-confirm'
 import 'vuetify/dist/vuetify.min.css'
 import FirebaseConfig from './config/firebase'
 import firebase from 'firebase'
 
 Vue.use(Vuetify)
+
 Vue.config.productionTip = false
+
+Vue.use(VuetifyConfirm, {
+  buttonTrueText: 'Да',
+  buttonFalseText: 'Нет',
+  width: 500
+})
 
 firebase.initializeApp(FirebaseConfig)
 
