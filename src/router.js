@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import MyMusic from '@/views/MyMusic'
+import Playlist from '@/views/Playlist'
 import Signin from '@/views/Signin'
 import Signup from '@/views/Signup'
 import MusicStore from '@/views/MusicStore'
 import AuthGuard from './auth-guard.js'
+
 
 Vue.use(Router)
 
@@ -15,6 +17,12 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/playlist/:id',
+      name: 'playlist',
+      component: Playlist,
+      props: true
     },
     {
       path: '/music_store',

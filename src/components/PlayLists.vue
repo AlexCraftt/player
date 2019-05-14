@@ -22,6 +22,9 @@
 <script>
     import Playlist from './PlayListsItem'
     export default {
+        components: {
+            Playlist
+        },
         data(){
             return {
                 Search: null
