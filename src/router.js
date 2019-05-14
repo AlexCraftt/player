@@ -4,7 +4,6 @@ import Home from './views/Home.vue'
 import MyMusic from '@/views/MyMusic'
 import Signin from '@/views/Signin'
 import Signup from '@/views/Signup'
-import Profile from '@/views/Profile'
 import MusicStore from '@/views/MusicStore'
 import AuthGuard from './auth-guard.js'
 
@@ -37,12 +36,6 @@ export default new Router({
       path: '/signup',
       name: 'signup',
       component: Signup
-    },
-    {
-      path: '/profile',
-      name: 'profile',
-      component: Profile,
-      beforeEnter: AuthGuard
     }
   ],
   mode: 'history'

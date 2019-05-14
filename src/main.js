@@ -18,7 +18,10 @@ Vue.use(VuetifyConfirm, {
   width: 500
 })
 
-firebase.initializeApp(FirebaseConfig)
+const firebaseApp = firebase.initializeApp(FirebaseConfig)
+const db = firebaseApp.firestore()
+
+Vue.$db =  db
 
 new Vue({
   router,
