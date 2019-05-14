@@ -13,7 +13,7 @@
                         <div class="headline">{{ playlist.title }}</div>
                     </v-card-title>
                     <v-card-actions>
-                        <v-btn fab flat class="white--text" :to="{name:'playlist', params:{id:playlist.id}}">
+                        <v-btn fab flat class="white--text">
                             <v-icon large>play_circle_outline</v-icon>
                         </v-btn>
                         <v-btn fab flat class="white--text">
@@ -33,8 +33,8 @@
 
 <script>
     export default {
-        props:{
-            "playlist": {
+        props: {
+            'playlist': {
                 type: Object,
                 required: true
             }
