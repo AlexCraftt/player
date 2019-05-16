@@ -3,30 +3,47 @@ export default {
         playlists: [
             {
                 id: 'aaaaaa',
-                title: 'Playlist 1',
+                title: 'Понравившиеся',
                 imageId: 'iaaaaa',
                 plailistItems: 10,
                 tracks: [
                     {
                         id: 'taaa',
-                        title: 'track 1',
-                        artist: 'Artist 1'
+                        title: 'Like a Stone',
+                        artist: 'Audioslave',
+                        time: '7:12'
                     },
                     {
                         id: 'tyaa',
-                        title: 'track 2',
-                        artist: 'Artist 2'
+                        title: 'Basket Case',
+                        artist: 'Green Day',
+                        time: '4:49'
                     },
                     {
                         id: 'tbaa',
-                        title: 'track 3',
-                        artist: 'Artist 3'
+                        title: 'Billy and Bonnie',
+                        artist: 'Стив Эрл',
+                        time: '6:34'
                     },
                     {
                         id: 'tcaa',
-                        title: 'track 4',
-                        artist: 'Artist 4'
+                        title: 'Feeling Good',
+                        artist: 'Nina Simone',
+                        time: '7:11'
+                    },
+                    {
+                        id: 'tgaa',
+                        title: 'Take Five',
+                        artist: 'Дейв Брубек',
+                        time: '3:15'
+                    },
+                    {
+                        id: 'tvaa',
+                        title: 'Boots',
+                        artist: 'The Dead South',
+                        time: '6:57'
                     }
+                    
                 ]
             },
             {
@@ -37,22 +54,22 @@ export default {
                 tracks: [
                     {
                         id: 'taaa',
-                        title: 'track 1',
+                        title: 'Track 1',
                         artist: 'Artist 1'
                     },
                     {
                         id: 'tyaa',
-                        title: 'track 2',
+                        title: 'Track 2',
                         artist: 'Artist 2'
                     },
                     {
                         id: 'tbaa',
-                        title: 'track 3',
+                        title: 'Track 3',
                         artist: 'Artist 3'
                     },
                     {
                         id: 'tcaa',
-                        title: 'track 4',
+                        title: 'Track 4',
                         artist: 'Artist 4'
                     }
                 ]
@@ -65,22 +82,22 @@ export default {
                 tracks: [
                     {
                         id: 'taaa',
-                        title: 'track 1',
+                        title: 'Track 1',
                         artist: 'Artist 1'
                     },
                     {
                         id: 'tyaa',
-                        title: 'track 2',
+                        title: 'Track 2',
                         artist: 'Artist 2'
                     },
                     {
                         id: 'tbaa',
-                        title: 'track 3',
+                        title: 'Track 3',
                         artist: 'Artist 3'
                     },
                     {
                         id: 'tcaa',
-                        title: 'track 4',
+                        title: 'Track 4',
                         artist: 'Artist 4'
                     }
                 ]

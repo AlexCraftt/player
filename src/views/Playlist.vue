@@ -1,14 +1,46 @@
 <template>
     <v-container grid-list-md v-if="playlist">
-        <v-layout row wrap>
-            <v-flex xs12 md10 offset-sm1>
-                <playlist-details :playlist="playlist"></playlist-details>
+        <v-layout row class="hidden-sm-and-down">
+            <v-flex xs6>
+                <v-layout column>
+                    <v-flex xs6>
+                        <playlist-details :playlist="playlist"></playlist-details>
+                    </v-flex>
+                </v-layout>
             </v-flex>
-            <v-flex xs12 md10 offset-sm1 v-for="track in playlist.tracks" :key="track.id">
-                <playlist-item :track="track"></playlist-item>
+            <v-flex xs6>
+                <v-layout column>
+                    <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">
+                        <v-list>
+                            <v-list-tile>
+                                <playlist-item :track="track"></playlist-item>
+                            </v-list-tile>
+                        </v-list>
+                    </v-flex>
+                </v-layout>
             </v-flex>
         </v-layout>
-    </v-container>
+        <v-layout column class="hidden-md-and-up">
+            <v-flex xs12>
+                <v-layout>
+                    <v-flex xs12>
+                        <playlist-details :playlist="playlist"></playlist-details>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+            <v-flex xs12>
+                <v-layout column>
+                    <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">
+                        <v-list>
+                            <v-list-tile>
+                                <playlist-item :track="track"></playlist-item>
+                            </v-list-tile>
+                        </v-list>
+                    </v-flex>
+                </v-layout>
+            </v-flex>
+        </v-layout>       
+    </v-container>    
 </template>
 
 <script>

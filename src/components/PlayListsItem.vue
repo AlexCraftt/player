@@ -14,10 +14,10 @@
                     </v-card-title>
                     <v-card-actions>
                         <v-btn fab flat class="white--text" :to="{name:'playlist', params:{id:playlist.id}}">
-                            <v-icon large>play_circle_outline</v-icon>
+                            <v-icon style="font-size: 3em">play_circle_outline</v-icon>
                         </v-btn>
                         <v-btn fab flat class="white--text">
-                            <v-icon large>playlist_add</v-icon>
+                            <v-icon style="font-size: 3em">playlist_add</v-icon>
                         </v-btn>                                    
                     </v-card-actions>
                 </v-flex>
