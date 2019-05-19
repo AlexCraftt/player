@@ -1,9 +1,9 @@
 <template>
     <v-layout row>
-        <v-flex xl1 lg2 md3 sm2 xs2>
+        <v-flex xl1 lg2 md3 sm2 xs2 align-content-center>
             <v-btn fab flat>
                 <v-icon large>
-                    play_circle_outline
+                    play_arrow
                 </v-icon>
             </v-btn>
         </v-flex>

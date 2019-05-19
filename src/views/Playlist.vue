@@ -1,22 +1,23 @@
 <template>
-    <v-container grid-list-md v-if="playlist">
+    <v-container v-if="playlist">
         <v-layout row class="hidden-sm-and-down">
-            <v-flex xs6>
+            <v-flex>
                 <v-layout column>
-                    <v-flex xs6>
+                    <v-flex>
                         <playlist-details :playlist="playlist"></playlist-details>
                     </v-flex>
                 </v-layout>
             </v-flex>
-            <v-flex xs6>
+            <v-flex>
                 <v-layout column>
-                    <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">
-                        <v-list>
+                    <v-list two-line>
+                        <v-flex v-for="track in playlist.tracks" :key="track.id">                        
                             <v-list-tile>
                                 <playlist-item :track="track"></playlist-item>
                             </v-list-tile>
-                        </v-list>
-                    </v-flex>
+                            <v-divider></v-divider>                      
+                        </v-flex>
+                    </v-list>
                 </v-layout>
             </v-flex>
         </v-layout>
@@ -30,13 +31,14 @@
             </v-flex>
             <v-flex xs12>
                 <v-layout column>
-                    <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">
-                        <v-list>
+                    <v-list two-line>
+                        <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">                        
                             <v-list-tile>
                                 <playlist-item :track="track"></playlist-item>
                             </v-list-tile>
-                        </v-list>
-                    </v-flex>
+                            <v-divider></v-divider>                      
+                        </v-flex>
+                    </v-list>
                 </v-layout>
             </v-flex>
         </v-layout>       

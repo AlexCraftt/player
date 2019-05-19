@@ -21,7 +21,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-toolbar app dark class="primary">
+        <v-toolbar app dark color="indigo darken-3">
             <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
             <router-link to="/" tag="span" style="cursor: pointer">
                 <v-toolbar-title><v-icon large>audiotrack</v-icon></v-toolbar-title>

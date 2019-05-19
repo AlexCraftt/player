@@ -1,10 +1,10 @@
 <template>
     <v-container grid-list-md>
         <v-layout row wrap>
-            <v-flex xs12 sm10 md8 offset-sm1 offset-md2>
+            <v-flex xs12>
                 <v-container fluid>
-                    <v-layout row>
-                        <v-flex>
+                    <v-layout row justify-center>
+                        <v-flex xs11 sm10 md8>
                             <v-text-field label="Поиск" v-model="Search">
 
                             </v-text-field>
