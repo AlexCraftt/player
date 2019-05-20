@@ -10,17 +10,19 @@
                     </v-img>
                 </v-flex>
                 <v-flex xs12 align-self-start>
-                    <v-card-title>
-                        <div class="headline">{{ playlist.title }}</div>
-                    </v-card-title>
-                    <v-card-actions>
-                        <v-btn fab flat class="white--text">
-                            <v-icon style="font-size: 3em">play_arrow</v-icon>
-                        </v-btn>
-                        <v-btn fab flat class="white--text">
-                            <v-icon style="font-size: 3em">playlist_add</v-icon>
-                        </v-btn>                                    
-                    </v-card-actions>
+                    <v-layout column justify-space-between>
+                        <v-card-title>
+                            <div class="headline">{{ playlist.title }}</div>
+                        </v-card-title>
+                        <v-card-actions>
+                            <v-btn fab flat class="white--text">
+                                <v-icon style="font-size: 3em">play_arrow</v-icon>
+                            </v-btn>
+                            <v-btn fab flat class="white--text">
+                                <v-icon style="font-size: 3em">playlist_add</v-icon>
+                            </v-btn>                                    
+                        </v-card-actions>
+                    </v-layout>
                 </v-flex>
             </v-layout>
             <v-layout row>

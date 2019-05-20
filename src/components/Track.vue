@@ -1,6 +1,6 @@
 <template>
     <v-layout row>
-        <v-flex xl1 lg2 md3 sm2 xs2 align-content-center>
+        <v-flex xl1 lg2 md2 sm2 xs2 align-content-center>
             <v-btn fab flat>
                 <v-icon large>
                     play_arrow
