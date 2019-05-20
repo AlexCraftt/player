@@ -3,7 +3,7 @@ export default {
         playlists: [
             {
                 id: 'aaaaaa',
-                title: 'Понравившиеся',
+                title: 'Понравившиеся мелодии из фильмов',
                 imageId: 'iaaaaa',
                 plailistItems: 10,
                 tracks: [

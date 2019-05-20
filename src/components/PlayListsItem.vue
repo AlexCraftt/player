@@ -2,14 +2,14 @@
     <v-card color="indigo" class="white--text">
         <v-container fluid>
             <v-layout row>
-                <v-flex xs6 md6 xl3>
+                <v-flex xs6>
                     <v-img src="https://i.ytimg.com/vi/OHZZuO2vY50/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3lsHGuz4qk22UCmxv6MnDXaRl6-BQ"
                     height="200px"
                     min-width="200px"
                     >
                     </v-img>
                 </v-flex>
-                <v-flex xs12 align-self-start>
+                <v-flex sm12 align-self-start>
                     <v-card-title>
                         <div class="headline">{{ playlist.title }}</div>
                     </v-card-title>
@@ -24,7 +24,7 @@
                 </v-flex>
             </v-layout>
             <v-layout row>
-                <v-flex xs12>
+                <v-flex sm12>
                     <div>Треков: {{ playlist.tracks.length }}</div>
                 </v-flex>
             </v-layout>

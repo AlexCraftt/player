@@ -1,10 +1,10 @@
 <template>
-    <v-container grid-list-md>
+    <v-container grid-list-xl>
         <v-layout row wrap>
             <v-flex xs12>
                 <v-container fluid>
                     <v-layout row justify-center>
-                        <v-flex xs11 sm10 md8>
+                        <v-flex xs10>
                             <v-text-field label="Поиск" v-model="Search">
 
                             </v-text-field>
@@ -12,7 +12,7 @@
                     </v-layout>
                 </v-container>
             </v-flex>
-            <v-flex v-for="playlist in filteredPlaylists" :key="playlist.id" xs12 md8 sm10 offset-sm1 offset-md2>
+            <v-flex v-for="playlist in filteredPlaylists" :key="playlist.id" xs12 sm12 md12 lg6 xl6>
                 <playlist :playlist="playlist"></playlist>
             </v-flex>
         </v-layout>

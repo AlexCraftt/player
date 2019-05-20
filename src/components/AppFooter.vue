@@ -2,7 +2,7 @@
     <v-footer fixed app color="indigo darken-3" height="72">
         <!-- Для больших экранов -->
         <v-layout row justify-space-between class="hidden-sm-and-down">
-            <v-flex sm5 md4 lg3>
+            <v-flex sm5 md4 lg3 offset-xs1>
                <v-btn fab flat dark>
                     <v-icon>
                         skip_previous

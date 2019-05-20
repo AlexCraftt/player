@@ -1,14 +1,10 @@
 <template>
     <v-container v-if="playlist">
         <v-layout row class="hidden-sm-and-down">
-            <v-flex>
-                <v-layout column>
-                    <v-flex>
-                        <playlist-details :playlist="playlist"></playlist-details>
-                    </v-flex>
-                </v-layout>
+            <v-flex xs12>
+                <playlist-details :playlist="playlist"></playlist-details>
             </v-flex>
-            <v-flex>
+            <v-flex xs12>
                 <v-layout column>
                     <v-list two-line>
                         <v-flex v-for="track in playlist.tracks" :key="track.id">                        
@@ -23,11 +19,7 @@
         </v-layout>
         <v-layout column class="hidden-md-and-up">
             <v-flex xs12>
-                <v-layout>
-                    <v-flex xs12>
-                        <playlist-details :playlist="playlist"></playlist-details>
-                    </v-flex>
-                </v-layout>
+                <playlist-details :playlist="playlist"></playlist-details>
             </v-flex>
             <v-flex xs12>
                 <v-layout column>
