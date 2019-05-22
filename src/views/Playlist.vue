@@ -1,20 +1,25 @@
 <template>
-    <v-container  fluid v-if="playlist">
+    <v-container fluid v-if="playlist">
         <v-layout row class="hidden-sm-and-down" justify-center>
             <v-flex md6>
                 <playlist-details :playlist="playlist"></playlist-details>
             </v-flex>
             <v-flex md6>
-                <v-layout column>
-                    <v-list two-line>
-                        <v-flex v-for="track in playlist.tracks" :key="track.id">                        
-                            <v-list-tile>
-                                <playlist-item :track="track"></playlist-item>
-                            </v-list-tile>
-                            <v-divider></v-divider>                      
-                        </v-flex>
-                    </v-list>
-                </v-layout>
+                <v-container
+                id="scroll-target"
+                style="max-height: 75vh"
+                class="scroll-y">
+                    <v-layout column v-scroll:#scroll-target="onScroll">
+                        <v-list two-line>
+                            <v-flex v-for="track in playlist.tracks" :key="track.id">                        
+                                <v-list-tile>
+                                    <playlist-item :track="track"></playlist-item>
+                                </v-list-tile>
+                                <v-divider></v-divider>                      
+                            </v-flex>
+                        </v-list>
+                    </v-layout>
+                </v-container>
             </v-flex>
         </v-layout>
         <v-layout column class="hidden-md-and-up">
@@ -22,16 +27,21 @@
                 <playlist-details :playlist="playlist"></playlist-details>
             </v-flex>
             <v-flex xs12>
-                <v-layout column>
-                    <v-list two-line>
-                        <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">                        
-                            <v-list-tile>
-                                <playlist-item :track="track"></playlist-item>
-                            </v-list-tile>
-                            <v-divider></v-divider>                      
-                        </v-flex>
-                    </v-list>
-                </v-layout>
+                <v-container
+                id="scroll-target"
+                style="max-height: 45vh"
+                class="scroll-y">
+                    <v-layout column v-scroll:#scroll-target="onScroll">
+                        <v-list two-line>
+                            <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">                        
+                                <v-list-tile>
+                                    <playlist-item :track="track"></playlist-item>
+                                </v-list-tile>
+                                <v-divider></v-divider>                      
+                            </v-flex>
+                        </v-list>
+                    </v-layout>
+                </v-container>               
             </v-flex>
         </v-layout>       
     </v-container>    
@@ -41,6 +51,11 @@
     import PlaylistDetails from '../components/PlaylistDetails'
     import PlaylistItem from '../components/Track'
     export default {
+        data() {
+            return {
+                
+            }
+        },
         props: {
             'id': {
                 type: String,
@@ -55,6 +70,16 @@
         components: {
             PlaylistDetails,
             PlaylistItem
+        },
+
+        methods: {
+            onScroll (e) {
+            this.offsetTop = e.target.scrollTop
+            }
         }
     }
 </script>
+
+<style scoped>
+
+</style>

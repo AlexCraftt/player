@@ -106,29 +106,36 @@
                 <!-- Для маленьких экранов -->
                 <v-layout row align-center justify-space-around class="hidden-lg-and-up">
                     <v-flex xs5>
-                        <v-btn fab flat dark class="mx-0">
-                            <v-icon>
+                        <v-btn fab flat dark class="mx-0 px-0">
+                            <v-icon small>
                                 skip_previous
                             </v-icon>
                         </v-btn>
-                        <v-btn fab flat dark class="mx-0">
-                            <v-icon large>
+                        <v-btn fab flat dark class="mx-0 px-0">
+                            <v-icon>
                                 play_arrow
                             </v-icon>
                         </v-btn>
-                        <v-btn fab flat dark class="mx-0">
-                            <v-icon>
+                        <v-btn fab flat dark class="mx-0 px-0">
+                            <v-icon small>
                                 skip_next
                             </v-icon>
                         </v-btn>
                     </v-flex>
-                    <v-flex xs7>
+                    <v-flex xs6>
                         <v-layout column>
                             <v-flex>
-                                <div class="subheading white--text text-no-wrap">What I Like About You (Acoustic) (feat. Theresa Rex)</div>
-                                <div class="body-2 white--text">Jonas Blue</div>
+                                <div class="body-2 white--text">What I Like About You (Acoustic) (feat. Theresa Rex)</div>
+                                <div class="body-3 white--text">Jonas Blue</div>
                             </v-flex>
                         </v-layout>
+                    </v-flex>
+                    <v-flex xs1 class="mr-3">
+                        <v-btn fab flat dark class="mx-0 my-0">
+                            <v-icon>
+                                more_vert
+                            </v-icon>
+                        </v-btn>
                     </v-flex>
                 </v-layout>
             </v-flex>

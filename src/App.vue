@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="scroll-behavior: unset">
     <app-header></app-header>
     <v-content>
       <router-view/>
@@ -18,3 +18,9 @@ import AppFooter from '@/components/AppFooter'
     }
   }
 </script>
+
+<style>
+  html,body {
+    overflow-y: hidden;
+  }
+</style>

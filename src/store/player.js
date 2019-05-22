@@ -42,6 +42,42 @@ export default {
                         title: 'Boots',
                         artist: 'The Dead South',
                         time: '6:57'
+                    },
+                    {
+                        id: 'taaa',
+                        title: 'Like a Stone',
+                        artist: 'Audioslave',
+                        time: '7:12'
+                    },
+                    {
+                        id: 'tyaa',
+                        title: 'Basket Case',
+                        artist: 'Green Day',
+                        time: '4:49'
+                    },
+                    {
+                        id: 'tbaa',
+                        title: 'Billy and Bonnie',
+                        artist: 'Стив Эрл',
+                        time: '6:34'
+                    },
+                    {
+                        id: 'tcaa',
+                        title: 'Feeling Good',
+                        artist: 'Nina Simone',
+                        time: '7:11'
+                    },
+                    {
+                        id: 'tgaa',
+                        title: 'Take Five',
+                        artist: 'Дейв Брубек',
+                        time: '3:15'
+                    },
+                    {
+                        id: 'tvaa',
+                        title: 'Boots',
+                        artist: 'The Dead South',
+                        time: '6:57'
                     }
                     
                 ]
