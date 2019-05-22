@@ -1,7 +1,7 @@
 <template>
-    <v-container grid-list-md fluid>
+    <v-container grid-list-lg fluid>
         <v-layout row wrap>
-            <v-flex xs12>
+            <v-flex xs12 offset-xs1>
                 <v-container fluid>
                     <v-layout row justify-center>
                         <v-flex xs10>
