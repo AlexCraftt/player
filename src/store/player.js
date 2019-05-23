@@ -8,73 +8,73 @@ export default {
                 plailistItems: 10,
                 tracks: [
                     {
-                        id: 'taaa',
+                        id: 'aaa',
                         title: 'Like a Stone',
                         artist: 'Audioslave',
                         time: '7:12'
                     },
                     {
-                        id: 'tyaa',
+                        id: 'aab',
                         title: 'Basket Case',
                         artist: 'Green Day',
                         time: '4:49'
                     },
                     {
-                        id: 'tbaa',
+                        id: 'aac',
                         title: 'Billy and Bonnie',
                         artist: 'Стив Эрл',
                         time: '6:34'
                     },
                     {
-                        id: 'tcaa',
+                        id: 'aad',
                         title: 'Feeling Good',
                         artist: 'Nina Simone',
                         time: '7:11'
                     },
                     {
-                        id: 'tgaa',
+                        id: 'aae',
                         title: 'Take Five',
                         artist: 'Дейв Брубек',
                         time: '3:15'
                     },
                     {
-                        id: 'tvaa',
+                        id: 'aaf',
                         title: 'Boots',
                         artist: 'The Dead South',
                         time: '6:57'
                     },
                     {
-                        id: 'taaa',
+                        id: 'aag',
                         title: 'Like a Stone',
                         artist: 'Audioslave',
                         time: '7:12'
                     },
                     {
-                        id: 'tyaa',
+                        id: 'aah',
                         title: 'Basket Case',
                         artist: 'Green Day',
                         time: '4:49'
                     },
                     {
-                        id: 'tbaa',
+                        id: 'aai',
                         title: 'Billy and Bonnie',
                         artist: 'Стив Эрл',
                         time: '6:34'
                     },
                     {
-                        id: 'tcaa',
+                        id: 'aaj',
                         title: 'Feeling Good',
                         artist: 'Nina Simone',
                         time: '7:11'
                     },
                     {
-                        id: 'tgaa',
+                        id: 'aak',
                         title: 'Take Five',
                         artist: 'Дейв Брубек',
                         time: '3:15'
                     },
                     {
-                        id: 'tvaa',
+                        id: 'aal',
                         title: 'Boots',
                         artist: 'The Dead South',
                         time: '6:57'
