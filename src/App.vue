@@ -20,7 +20,8 @@ import AppFooter from '@/components/AppFooter'
 </script>
 
 <style>
-  html,body {
+  html, body {
     overflow-y: hidden;
+    max-height: 100vh;
   }
 </style>
