@@ -145,6 +145,16 @@
 
 <script>
     export default {
-        
+        data () {
+            return {
+                props: {
+                    file: {
+                        type: String,
+                        default: null
+                    },
+                    
+                }
+            }
+        }
     }
 </script>

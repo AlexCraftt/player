@@ -53,13 +53,6 @@
     import PlaylistDetails from '../components/PlaylistDetails'
     import PlaylistItem from '../components/Track'
     export default {
-        data: () => ({
-            windowSize: {
-                x: 0,
-                y: 0
-            },
-            listHeight: 0
-        }),
         props: {
             'id': {
                 type: String,

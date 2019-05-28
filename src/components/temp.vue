@@ -1,7 +1,3 @@
-
-                
-
-
 <template>
     <div>
         <v-card color="blue lighten-2" class="white--text">
@@ -21,10 +17,6 @@
                     <v-progress-linear height="5" value="1"></v-progress-linear>
                 </v-flex>
             </v-layout>
-
-            <!-- <v-flex xs12 md10 offset-sm1 v-for="track in playlist.tracks" :key="track.id">
-                <playlist-item :track="track"></playlist-item>
-            </v-flex> -->
         </v-card>
     </div>
 </template>

@@ -16,6 +16,9 @@
                     <v-list-tile-content>
                         <v-list-tile-title v-text="track.artist"></v-list-tile-title>
                     </v-list-tile-content>
+                    <v-list-tile-content>
+                        <audio src="gs://player-ff8d9.appspot.com/true.mp3" type="audio/mpeg"></audio>
+                    </v-list-tile-content>
                 </v-flex>
             </v-layout>
         </v-flex>
@@ -30,11 +33,6 @@
 
 <script>
     export default {
-        data(){
-            return {
-
-            }
-        },
         props: {
             "track": {
                 type: Object,
