@@ -10,7 +10,7 @@
                 id="scroll-target"
                 style="height: 80vh"
                 class="scroll-y">
-                    <v-layout column v-scroll:#scroll-target="onScroll">
+                    <v-layout column>
                         <v-list two-line>
                             <v-flex v-for="track in playlist.tracks" :key="track.id">                        
                                 <v-list-tile>
@@ -32,7 +32,7 @@
                 id="scroll-target listlg" 
                 style="height: 50vh" 
                 class="scroll-y">
-                    <v-layout column v-scroll:#scroll-target="onScroll">
+                    <v-layout column>
                         <v-list two-line>
                             <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">                      
                                 <v-list-tile>
@@ -67,6 +67,9 @@
         components: {
             PlaylistDetails,
             PlaylistItem
+        },
+        methods: {
+            
         }
     }
 </script>

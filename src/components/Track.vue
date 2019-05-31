@@ -17,7 +17,7 @@
                         <v-list-tile-title v-text="track.artist"></v-list-tile-title>
                     </v-list-tile-content>
                     <v-list-tile-content>
-                        <audio src="gs://player-ff8d9.appspot.com/true.mp3" type="audio/mpeg"></audio>
+                        <audio src="#" type="audio/mpeg"></audio>
                     </v-list-tile-content>
                 </v-flex>
             </v-layout>
@@ -32,12 +32,13 @@
 </template>
 
 <script>
+    const formatTime = second => new Date(second * 1000).toISOString().substr(11, 8);
     export default {
         props: {
             "track": {
                 type: Object,
                 required: true
             }
-        }
+        }           
     }
 </script>

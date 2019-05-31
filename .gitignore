@@ -2,7 +2,8 @@
 node_modules
 /dist
 /src/config
-
+/tracks
+/pics
 # local env files
 .env.local
 .env.*.local

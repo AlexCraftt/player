@@ -3,7 +3,7 @@
         <v-container fluid>
             <v-layout row>
                 <v-flex xs6>
-                    <v-img src="https://i.ytimg.com/vi/OHZZuO2vY50/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3lsHGuz4qk22UCmxv6MnDXaRl6-BQ"
+                    <v-img :src="playlist.imageUrl"
                     height="200px"
                     min-width="200px"
                     >
