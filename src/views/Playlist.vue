@@ -36,9 +36,8 @@
                         <v-list two-line>
                             <v-flex xs12 v-for="track in playlist.tracks" :key="track.id">                      
                                 <v-list-tile>
-                                    <playlist-item :track="track"></playlist-item>
-                                </v-list-tile>
-                                <v-divider></v-divider>                      
+                                    <playlist-item :track="track" :playlistId="playlist.id"></playlist-item>
+                                </v-list-tile>             
                             </v-flex>
                         </v-list>
                     </v-layout>
@@ -49,6 +48,7 @@
 </template>
 
 <script>
+
     import Vue from 'vue'
     import PlaylistDetails from '../components/PlaylistDetails'
     import PlaylistItem from '../components/Track'
@@ -62,14 +62,11 @@
         computed: {
             playlist(){
                 return this.$store.getters.getPlaylists.find(p => p.id == this.id)
-            }
+            },
         },
         components: {
             PlaylistDetails,
             PlaylistItem
-        },
-        methods: {
-            
         }
     }
 </script>

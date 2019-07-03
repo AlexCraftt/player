@@ -2,7 +2,8 @@ import Vue from 'vue'
 
 export default {
     state: {
-        playlists: []
+        playlists: [],
+        tracks: []
     },
 
     mutations: {
@@ -31,7 +32,9 @@ export default {
                             let track = {
                                 id: t.id,
                                 title: t.title,
-                                artist: t.artist
+                                artist: t.artist,
+                                file: t.file,
+                                howl: t.howl
                             }
                             tracks.push(track)
                         })
@@ -50,5 +53,8 @@ export default {
 
     getters: {
         getPlaylists: (state) => state.playlists
+    },
+    track (state) {
+        return state.track
     }
 }
