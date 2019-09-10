@@ -8,7 +8,6 @@ import 'vuetify/dist/vuetify.min.css'
 import FirebaseConfig from './config/firebase'
 import firebase from 'firebase'
 import "firebase/firestore"
-import * as cors from 'cors';
 // import {Howl, Howler} from 'howler'
 
 Vue.use(Vuetify)
@@ -23,7 +22,6 @@ Vue.use(VuetifyConfirm, {
   width: 500
 })
 
-const cors = require('cors')({origin: true});
 const firebaseApp = firebase.initializeApp(FirebaseConfig)
 const db = firebaseApp.firestore()
 Vue.$db = db
